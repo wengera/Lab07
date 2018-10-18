@@ -15,8 +15,8 @@ class HourlyEmployee extends Employee {
     private $wage;
     private $hours;
     
-    public function __construct($person,$ssn, $employee_count, $wage, $hours) {
-        parent:: __construct($person, $ssn, $employee_count);
+    public function __construct($person,$ssn, $wage, $hours) {
+        parent:: __construct($person, $ssn);
         $this->wage = $wage;
         $this->hours = $hours;
     }
