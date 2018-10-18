@@ -1,7 +1,7 @@
 <?php
 
 
-class Salaried_Employee extends Employee {
+class SalariedEmployee extends Employee {
     private $weekly_salary;
     
     public function __construct($person,$ssn, $employee_count, $weekly_salary) {
