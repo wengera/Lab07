@@ -11,7 +11,7 @@
  *
  * @author kevinjune
  */
-class HourlyEmployee {
+class HourlyEmployee extends Employee {
     private $wage;
     private $hours;
     
