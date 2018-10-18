@@ -11,7 +11,7 @@
  *
  * @author awenger
  */
-abstract class Employee {
+abstract class Employee implements Payable {
     private $person;
     private $ssn;
     private $employee_count;
@@ -34,6 +34,8 @@ abstract class Employee {
     public function getEmployeeCount(){
         return $this->employee_count;
     }
+    
+    abstract function getPaymentAmount();
     
     public function toString(){
         print("[Employee] TODO ToString()");
