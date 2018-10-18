@@ -14,4 +14,8 @@ class SalariedEmployee extends Employee {
     public function getPaymentAmount() {
         return $this->weekly_salary;
     }
+    public function toString() {
+    print("[SalariedEmployee] TODO ToString()");
+    }
+
 }

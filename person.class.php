@@ -15,4 +15,8 @@ class Person {
     public function getLast_Name() {
         return $this->last_name;
     }
+    public function toString() {
+    print("[Person] TODO ToString()");
+    }
+
 }
