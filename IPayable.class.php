@@ -9,7 +9,7 @@
 /**
  * Description of IPayable
  *
- * @author awenger
+ * @author Alex Wenger
  */
 interface IPayable {
     //put your code here

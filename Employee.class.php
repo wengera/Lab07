@@ -9,7 +9,7 @@
 /**
  * Description of Employee
  *
- * @author awenger
+ * @author Alex Wenger
  */
 abstract class Employee implements Payable {
     private $person;

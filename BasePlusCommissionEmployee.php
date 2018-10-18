@@ -7,34 +7,27 @@
  */
 
 /**
- * Description of CommissionEmployee
+ * Description of BasePlusCommissionEmployee
  *
- * @author awenger
+ * @author Alex Wenger
  */
 class BasePlusCommissionEmployee extends CommissionEmployee {
-    private $sales;
-    private $commission_rate;
+    private $base_salary;
     
-    //TODO
-    function __construct($sales, $commission_rate, $person, $ssn, $employee_count){
-        parent:: __construct($sales, $commission_rate, $person);
-        $this->ssn = $ssn;
-        $this->employee_count = $employee_count;
+    function __construct($base_salary, $sales, $commission_rate, $person, $ssn, $employee_count){
+        parent:: __construct($sales, $commission_rate, $person, $ssn, $employee_count);
+        $this->base_salary = $base_salary;
     }
     
     public function getPaymentAmount(){
-        return $this->sales * $this->commission_rate;
+        return $this->$base_salary + parent::getPaymentAmount();
     }
     
-    public function getSales(){
-        return $this->sales;
-    }
-    
-    public function getCommissionRate(){
-        return $this->commission_rate;
+    public function getBaseSalary(){
+        return $this->base_salary;
     }
     
     public function toString(){
-        print("[CommissionEmployee] TODO ToString()");
+        print("[BasePlusCommissionEmployee] TODO ToString()");
     }
 }

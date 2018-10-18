@@ -9,7 +9,7 @@
 /**
  * Description of CommissionEmployee
  *
- * @author awenger
+ * @author Alex Wenger
  */
 class CommissionEmployee extends Employee {
     private $sales;
