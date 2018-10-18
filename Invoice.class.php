@@ -26,31 +26,44 @@ class Invoice implements IPayable{
         self::$invoice_count = self::$invoice_count + 1;
     }
     
+    //Returns the part number
     function getPartNumber(){
         return $this->part_number;
     }
     
+    //returns the part description
     function getPartDescription(){
         return $this->part_description;
     }
     
+    //returns the number of parts for the invoice
     function getQuantity(){
         return $this->quantity;
     }
     
+    //returns the price of the item
     function getPricePerItem(){
         return $this->price_per_item;
     }
     
+    //returns the total number of invoices
     static function getInvoiceCount(){
         return self::$invoice_count;
     }
     
+    //returns the invoice total
     function getPaymentAmount(){
-        return $this->invoice_count * $this->price_per_item;
+        return $this->quantity * $this->price_per_item;
     }
     
-    function toString(){
-        return "[Invoice] TODO toString()";
+    //prints the invoice
+    public function toString(){
+        $printStr = "<b>Invoice:</b><br />";
+        $printStr .= "Part Number: " . $this->getPartNumber() . " (" . $this->getPartDescription() . ")<br />";
+        $printStr .= "Quantity: " . $this->getQuantity() . "<br />";
+        $printStr .= "Price per item: $" . $this->getPricePerItem() . "<br />";
+        $printStr .= "Payment: $" . $this->getPaymentAmount() . "<br />";
+        
+        return $printStr;
     }
 }
