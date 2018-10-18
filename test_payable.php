@@ -12,6 +12,9 @@
  * @author awenger
  */
 
+require_once 'autoloading.php';
+
+/*
 require_once 'IPayable.class.php';
 require_once 'Invoice.class.php';
 require_once 'Employee.class.php';
@@ -20,7 +23,7 @@ require_once 'CommissionEmployee.class.php';
 require_once 'hourly_employee.class.php';
 require_once 'salaried_employee.class.php';
 require_once 'BasePlusCommissionEmployee.class.php';
-
+*/
 
 
 
