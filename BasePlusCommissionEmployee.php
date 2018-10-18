@@ -11,7 +11,7 @@
  *
  * @author awenger
  */
-class CommissionEmployee extends Employee {
+class BasePlusCommissionEmployee extends CommissionEmployee {
     private $sales;
     private $commission_rate;
     
