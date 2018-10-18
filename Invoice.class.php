@@ -16,14 +16,14 @@ class Invoice implements IPayable{
     private $part_description;
     private $quantity;
     private $price_per_item;
-    private $invoice_count;
+    private static $invoice_count = 0;
     
-    function __construct($part_number, $part_description, $quantity, $price_per_item, $invoice_count){
+    function __construct($part_number, $part_description, $quantity, $price_per_item){
         $this->part_number = $part_number;
         $this->part_description = $part_description;
         $this->quantity = $quantity;
         $this->price_per_item = $price_per_item;
-        $this->invoice_count = $invoice_count;
+        self::$invoice_count = self::$invoice_count + 1;
     }
     
     function getPartNumber(){
@@ -42,8 +42,8 @@ class Invoice implements IPayable{
         return $this->price_per_item;
     }
     
-    function getInvoiceCount(){
-        return $this->invoice_count;
+    static function getInvoiceCount(){
+        return self::$invoice_count;
     }
     
     function getPaymentAmount(){
