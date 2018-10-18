@@ -11,7 +11,7 @@
  *
  * @author Alex Wenger
  */
-abstract class Employee implements Payable {
+abstract class Employee implements IPayable {
     private $person;
     private $ssn;
     private $employee_count;
