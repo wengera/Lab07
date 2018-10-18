@@ -43,17 +43,17 @@ class Invoice implements IPayable{
     
     //returns the price of the item
     function getPricePerItem(){
-        return $this->price_per_item;
+        return number_format((float)$this->price_per_item, 2, '.', '');
     }
     
     //returns the total number of invoices
-    static function getInvoiceCount(){
+    public static function getInvoiceCount(){
         return self::$invoice_count;
     }
     
     //returns the invoice total
     function getPaymentAmount(){
-        return $this->quantity * $this->price_per_item;
+        return number_format((float)$this->quantity * $this->price_per_item, 2, '.', '');
     }
     
     //prints the invoice

@@ -16,7 +16,7 @@ class Person {
         return $this->last_name;
     }
     public function toString() {
-    print("[Person] TODO ToString()");
+        return "" . $this->first_name . " " . $this->last_name;
     }
 
 }

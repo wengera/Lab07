@@ -14,13 +14,13 @@
 abstract class Employee implements IPayable {
     private $person;
     private $ssn;
-    private $employee_count;
+    private static $employee_count = 0;
     
     //TODO
-    function __construct($person, $ssn, $employee_count){
+    function __construct($person, $ssn){
         $this->person = $person;
         $this->ssn = $ssn;
-        $this->employee_count = $employee_count;
+        self::$employee_count += 1;
     }
     
     public function getPerson(){
@@ -31,8 +31,8 @@ abstract class Employee implements IPayable {
         return $this->ssn;
     }
     
-    public function getEmployeeCount(){
-        return $this->employee_count;
+    public static function getEmployeeCount(){
+        return self::$employee_count;
     }
     
     abstract function getPaymentAmount();

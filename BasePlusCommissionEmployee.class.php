@@ -14,20 +14,29 @@
 class BasePlusCommissionEmployee extends CommissionEmployee {
     private $base_salary;
     
-    function __construct($base_salary, $sales, $commission_rate, $person, $ssn, $employee_count){
-        parent:: __construct($sales, $commission_rate, $person, $ssn, $employee_count);
+    function __construct($base_salary, $sales, $commission_rate, $person, $ssn){
+        parent:: __construct($sales, $commission_rate, $person, $ssn);
         $this->base_salary = $base_salary;
     }
     
     public function getPaymentAmount(){
-        return $this->$base_salary + parent::getPaymentAmount();
+        return number_format((float)$this->base_salary + parent::getPaymentAmount(), 2, '.', '');
     }
     
     public function getBaseSalary(){
-        return $this->base_salary;
+        return number_format((float)$this->base_salary, 2, '.', '');
     }
     
+    //Returns a description of the BasePlusCommissionEmployee
     public function toString(){
-        print("[BasePlusCommissionEmployee] TODO ToString()");
+        $printStr = "<b>Base Plus Commission Employee:</b><br />";
+        $printStr .= "Name: " . $this->getPerson()->toString() . "<br />";
+        $printStr .= "Social Security Number: " . $this->getSSN() . "<br />";
+        $printStr .= "Gross Sale: $" . number_format((float)parent::getSales(), 2, '.', '') . "<br />";
+        $printStr .= "Commission Rate: " . parent::getCommissionRate() . "<br />";
+        $printStr .= "Base Salary: " . $this->getBaseSalary() . "<br />";
+        $printStr .= "Earning: $" . $this->getPaymentAmount() . "<br />";
+        
+        return $printStr;
     }
 }
