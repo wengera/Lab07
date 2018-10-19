@@ -1,6 +1,17 @@
 <?php
 
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
+/**
+ * Description of hourly_employee.class
+ *
+ * @author kevinjune
+ * @date 10/18/2018
+ */
 class SalariedEmployee extends Employee {
     private $weekly_salary;
     
@@ -9,18 +20,17 @@ class SalariedEmployee extends Employee {
         $this->weekly_salary = $weekly_salary;
     }
     public function getWeeklySalary() {
-        return $this->weekly_salary;
+        return number_format((float)$this->weekly_salary, 2, '.', '');
     }
     public function getPaymentAmount() {
-        return $this->weekly_salary;
+        return number_format((float)$this->weekly_salary, 2, '.', '');
     }
     public function toString() {
-    print
         $printStr = "<b>Salaried Employee</b><br />";
         $printStr .= "Name: " . parent::getPerson()->toString() . "<br />";
-        $printStr .= "Social Security Number: " . parent::getSSN()->toString() . "<br />";
-        $printStr .= "Weekly salary: " . number_format((float)$this->getWeeklySalary(), 2, '.', '') . "<br />";
-        $printStr .= "Earning: " . $this->getPaymentAmount() . "<br />";
+        $printStr .= "Social Security Number: " . parent::getSSN() . "<br />";
+        $printStr .= "Weekly salary: $" . $this->getWeeklySalary() . "<br />";
+        $printStr .= "Earning: $" . $this->getPaymentAmount() . "<br />";
         return $printStr;
     }
 

@@ -10,6 +10,7 @@
  * Description of BasePlusCommissionEmployee
  *
  * @author Alex Wenger
+ * @date 10/18/2018
  */
 class BasePlusCommissionEmployee extends CommissionEmployee {
     private $base_salary;
@@ -19,10 +20,12 @@ class BasePlusCommissionEmployee extends CommissionEmployee {
         $this->base_salary = $base_salary;
     }
     
+    //returns payment amount
     public function getPaymentAmount(){
         return number_format((float)$this->base_salary + parent::getPaymentAmount(), 2, '.', '');
     }
     
+    //returns base salary
     public function getBaseSalary(){
         return number_format((float)$this->base_salary, 2, '.', '');
     }
@@ -34,7 +37,7 @@ class BasePlusCommissionEmployee extends CommissionEmployee {
         $printStr .= "Social Security Number: " . $this->getSSN() . "<br />";
         $printStr .= "Gross Sale: $" . number_format((float)parent::getSales(), 2, '.', '') . "<br />";
         $printStr .= "Commission Rate: " . parent::getCommissionRate() . "<br />";
-        $printStr .= "Base Salary: " . $this->getBaseSalary() . "<br />";
+        $printStr .= "Base Salary: $" . $this->getBaseSalary() . "<br />";
         $printStr .= "Earning: $" . $this->getPaymentAmount() . "<br />";
         
         return $printStr;

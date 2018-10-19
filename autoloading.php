@@ -6,6 +6,12 @@
  * and open the template in the editor.
  */
 
+/**
+ * Description of test_payable
+ *
+ * @authors awenger
+ * @date 10/18/2018
+ */
 function __autoload($classname) {
     $filename = "./". $classname .".class.php";
     include_once($filename);

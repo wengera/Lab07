@@ -10,6 +10,7 @@
  * Description of test_payable
  *
  * @authors awenger kjune
+ * @date 10/18/2018
  */
 
 require_once 'autoloading.php';
@@ -42,7 +43,7 @@ echo "<br />";
 echo "<br />";
 
 echo $invoice_two->toString();
- 
+ echo "<br />";
 /* </Invoice> */
 
 
@@ -55,7 +56,7 @@ echo "<br />";
 echo "<br />";
 
 echo $sal_emp->toString();
-
+echo "<br />";
 /* </Salaried Employee> */
 
 

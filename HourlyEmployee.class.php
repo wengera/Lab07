@@ -10,6 +10,7 @@
  * Description of hourly_employee.class
  *
  * @author kevinjune
+ * @date 10/18/2018
  */
 class HourlyEmployee extends Employee {
     private $wage;
@@ -20,25 +21,29 @@ class HourlyEmployee extends Employee {
         $this->wage = $wage;
         $this->hours = $hours;
     }
+    
+    //returns the wage of the hourly employee
     public function getWage() {
-        return $this->wage;
+        return number_format((float)$this->wage, 2, '.', '');
     }
     
+    //returns the employee hours
     public function getHours() {
         return $this->hours;
     }
     
+    //returns the employee's payment amount
     public function getPaymentAmount() {
-        return $this->wage * $this->hours;
+        return number_format((float)$this->wage * $this->hours, 2, '.', '');
     }
-    public function toString() {
-    print        
+    
+    public function toString() {      
         $printStr = "<b>Hourly Employee</b><br />";
         $printStr .= "Name: " . parent::getPerson()->toString() . "<br />";
         $printStr .= "Social Security Number: " . parent::getSSN() . "<br />";
-        $printStr .= "Wage per hour: " . number_format((float)$this->getWage(), 2, '.', '') . "<br />";
+        $printStr .= "Wage per hour: $" . $this->getWage() . "<br />";
         $printStr .= "Hours: " . $this->getHours() . "<br />";
-        $printStr .= "Earning: " . $this->getPaymentAmount() . "<br />";
+        $printStr .= "Earning: $" . $this->getPaymentAmount() . "<br />";
         return $printStr;
     }
 }

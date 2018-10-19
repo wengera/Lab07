@@ -10,27 +10,31 @@
  * Description of Employee
  *
  * @author Alex Wenger
+ * @date 10/18/2018
  */
 abstract class Employee implements IPayable {
     private $person;
     private $ssn;
     private static $employee_count = 0;
     
-    //TODO
+    
     function __construct($person, $ssn){
         $this->person = $person;
         $this->ssn = $ssn;
         self::$employee_count += 1;
     }
     
+    //returns the employee's person object
     public function getPerson(){
         return $this->person;
     }
     
+    //returns employee social security number
     public function getSSN(){
         return $this->ssn;
     }
     
+    //Returns total number of employees
     public static function getEmployeeCount(){
         return self::$employee_count;
     }
@@ -38,6 +42,10 @@ abstract class Employee implements IPayable {
     abstract function getPaymentAmount();
     
     public function toString(){
-        print("[Employee] TODO ToString()");
+        $printStr = "<b>Employee:</b><br />";
+        $printStr .= "Name: " . $this->getPerson()->toString() . "<br />";
+        $printStr .= "Social Security Number: " . $this->getSSN() . "<br />";
+        
+        return $printStr;
     }
 }
