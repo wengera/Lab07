@@ -10,6 +10,7 @@
  * Description of Invoice
  *
  * @author Alex Wenger
+ * @date 10/18/2018
  */
 class Invoice implements IPayable{
     private $part_number;
