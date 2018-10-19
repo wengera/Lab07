@@ -8,9 +8,10 @@
 
 /**
  * Description of hourly_employee.class
- *
+ * @title HourlyEmployee
  * @author kevinjune
  * @date 10/18/2018
+ * @description Class Object for Hourly Employees
  */
 class HourlyEmployee extends Employee {
     private $wage;
