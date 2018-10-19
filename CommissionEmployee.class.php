@@ -8,9 +8,10 @@
 
 /**
  * Description of CommissionEmployee
- *
+ * @title Commission Employees
  * @author Alex Wenger
  * @date 10/18/2018
+ * @description Object for Commission Employees
  */
 class CommissionEmployee extends Employee {
     private $sales;

@@ -8,9 +8,10 @@
 
 /**
  * Description of Employee
- *
+ * @title Employee
  * @author Alex Wenger
  * @date 10/18/2018
+ * @description Abstract Class Definition for Employees
  */
 abstract class Employee implements IPayable {
     private $person;

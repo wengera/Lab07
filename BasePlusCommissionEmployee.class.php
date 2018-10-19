@@ -8,9 +8,10 @@
 
 /**
  * Description of BasePlusCommissionEmployee
- *
+ * @title BasePlusCommissionEmployee
  * @author Alex Wenger
  * @date 10/18/2018
+ * @description Object for Base Plus Commission Employees
  */
 class BasePlusCommissionEmployee extends CommissionEmployee {
     private $base_salary;

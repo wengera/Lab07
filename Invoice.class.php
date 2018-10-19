@@ -8,9 +8,11 @@
 
 /**
  * Description of Invoice
- *
+ * @class Invoice
  * @author Alex Wenger
  * @date 10/18/2018
+ * @description Object for Invoices
+ * 
  */
 class Invoice implements IPayable{
     private $part_number;

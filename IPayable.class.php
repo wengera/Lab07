@@ -8,9 +8,10 @@
 
 /**
  * Description of IPayable
- *
+ * @title IPayable
  * @author Alex Wenger
  * @date 10/18/2018
+ * @description Interface for Employee Payment Functions
  */
 interface IPayable {
     //put your code here

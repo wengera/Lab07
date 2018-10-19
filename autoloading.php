@@ -8,9 +8,10 @@
 
 /**
  * Description of test_payable
- *
+ * @title autoloading
  * @authors awenger
  * @date 10/18/2018
+ * @description Helper Class for autoloading
  */
 function __autoload($classname) {
     $filename = "./". $classname .".class.php";

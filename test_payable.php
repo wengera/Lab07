@@ -8,9 +8,10 @@
 
 /**
  * Description of test_payable
- *
+ * @title test_payable
  * @authors awenger kjune
  * @date 10/18/2018
+ * @description Main page that displays all employee and invoice information
  */
 
 require_once 'autoloading.php';
