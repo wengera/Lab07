@@ -4,7 +4,7 @@
 class SalariedEmployee extends Employee {
     private $weekly_salary;
     
-    public function __construct($person,$ssn, $weekly_salary) {
+    public function __construct($person,$ssn, $weekly_salary, $earnings) {
         parent:: __construct($person, $ssn);
         $this->weekly_salary = $weekly_salary;
     }
@@ -15,7 +15,13 @@ class SalariedEmployee extends Employee {
         return $this->weekly_salary;
     }
     public function toString() {
-    print("[SalariedEmployee] TODO ToString()");
+    print
+        $printStr = "<b>Salaried Employee</b><br />";
+        $printStr .= "Name: " . parent::getPerson()->toString() . "<br />";
+        $printStr .= "Social Security Number: " . parent::getSSN()->toString() . "<br />";
+        $printStr .= "Weekly salary: " . number_format((float)$this->getWeeklySalary(), 2, '.', '') . "<br />";
+        $printStr .= "Earning: " . $this->getPaymentAmount() . "<br />";
+        return $printStr;
     }
 
 }

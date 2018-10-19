@@ -9,7 +9,7 @@
 /**
  * Description of test_payable
  *
- * @author awenger
+ * @authors awenger kjune
  */
 
 require_once 'autoloading.php';
@@ -19,6 +19,8 @@ require_once 'autoloading.php';
 /* <People> */
     $SueJones = new Person("Sue", "Jones");
     $BobLewis = new Person("Bob", "Lewis");
+    $JohnSmith = new Person("John", "Smith");
+    $KarenPrice = new Person("Karen", "Price");
 /* </People> */
 
     
@@ -46,12 +48,26 @@ echo $invoice_two->toString();
 
 
 /* <Salaried Employee> */
+$sal_emp = new SalariedEmployee($JohnSmith, '111-11-1111', 800.00);
+        
+echo "*****************************************************";
+echo "<br />";
+echo "<br />";
+
+echo $sal_emp->toString();
 
 /* </Salaried Employee> */
 
 
 
 /* <Hourly Employee> */
+$hr_emp = new HourlyEmployee($KarenPrice, '222-22-2222', 16.75, 40);
+
+echo "*****************************************************";
+echo "<br />";
+echo "<br />";
+
+echo $hr_emp->toString();
 
 /* </Hourly Employee> */
 

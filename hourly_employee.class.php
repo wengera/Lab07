@@ -32,6 +32,13 @@ class HourlyEmployee extends Employee {
         return $this->wage * $this->hours;
     }
     public function toString() {
-    print("[SalariedEmployee] TODO ToString()");
+    print        
+        $printStr = "<b>Hourly Employee</b><br />";
+        $printStr .= "Name: " . parent::getPerson()->toString() . "<br />";
+        $printStr .= "Social Security Number: " . parent::getSSN() . "<br />";
+        $printStr .= "Wage per hour: " . number_format((float)$this->getWage(), 2, '.', '') . "<br />";
+        $printStr .= "Hours: " . $this->getHours() . "<br />";
+        $printStr .= "Earning: " . $this->getPaymentAmount() . "<br />";
+        return $printStr;
     }
 }
